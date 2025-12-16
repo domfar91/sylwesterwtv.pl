@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+	background-color: #000;
+	color: #fff;
+	font-family: 'VT323', monospace;
+	margin: 0;
+	padding: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	-webkit-font-smoothing: none;
+	text-rendering: optimizeSpeed;
+	scroll-behavior: smooth;
+}
+
+header {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.logo {
+	color: #00ff00;
+	font-size: 3rem;
+	margin: 0 0 15px 0;
+	line-height: 1.1;
+	text-shadow: 2px 2px #000;
+}
+
+header p {
+	font-size: 1.4rem;
+	color: #fff;
+	margin: 0;
+	max-width: 1200px;
+	line-height: 1.3;
+}
+
+.arrow {
+	color: #00ff00;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.fast-nav {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	max-width: 1200px;
+	margin: 50px auto 50px auto;
+}
+
+.fast-nav a {
+	flex: 1;
+	text-align: center;
+	text-decoration: none;
+	padding: 12px 5px;
+	font-size: 1.4rem;
+	border: 2px solid #fff;
+	font-weight: bold;
+}
+
+.btn-tvp {
+	background-color: #00529e;
+	color: #fff;
+}
+.btn-polsat {
+	background-color: #ffda00;
+	color: #000;
+}
+.btn-republika {
+	background-color: #ffffff;
+	color: #000;
+}
+.btn-tvn {
+	background-color: #0042b5;
+	color: #fff;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 50px;
+	justify-content: flex-start;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.station-card {
+	border-width: 3px;
+	border-style: solid;
+	padding: 15px;
+	background: #000;
+	flex: 1 1 100%;
+	box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+	.station-card {
+		flex: 0 0 calc(50% - 25px);
+	}
+	.fast-nav a {
+		font-size: 1.8rem;
+		padding: 15px;
+	}
+}
+
+.station-name {
+	padding: 10px;
+	margin: -15px -15px 15px -15px;
+	font-size: 1.8rem;
+	font-weight: normal;
+	display: block;
+	line-height: 1.2;
+}
+
+.tvp {
+	border-color: #fff;
+}
+.tvp .station-name {
+	background-color: #00529e;
+	color: #fff;
+}
+
+.polsat {
+	border-color: #ff00ff;
+}
+.polsat .station-name {
+	background-color: #ffda00;
+	color: #000;
+}
+
+.tvn {
+	border-color: #00ff00;
+}
+.tvn .station-name {
+	background-color: #0042b5;
+	color: #fff;
+}
+
+.republika {
+	border-color: #ff0000;
+}
+.republika .station-name {
+	background-color: #ffffff;
+	color: #000;
+}
+
+.artist-list {
+	list-style: none;
+	padding: 0;
+	margin-top: 15px;
+}
+
+.artist-list li {
+	margin-bottom: 8px;
+	font-size: 1.6rem;
+	color: #00ffff;
+}
+
+.artist-list li::before {
+	content: '> ';
+	color: #fff;
+}
+
+.tvn .artist-list li::before {
+	content: '';
+}
+
+.share-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 50px auto 0 auto;
+	text-align: center;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+#shareBtn {
+	background-color: #00ff00;
+	color: #000;
+	font-family: 'VT323', monospace;
+	font-size: 1.8rem;
+	padding: 15px 30px;
+	border: 3px solid #fff;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	width: 100%;
+	max-width: 500px;
+	display: inline-block;
+}
+
+#shareBtn:active {
+	background-color: #fff;
+}
+
+.footer {
+	width: 100%;
+	max-width: 1200px;
+	margin: 50px auto 40px auto;
+	text-align: center;
+}
+
+.footer p {
+	background-color: #ffff00;
+	color: #000;
+	font-size: 2rem;
+	padding: 15px 25px;
+	margin: 0;
+	display: inline-block;
+	border: 3px solid #fff;
+	letter-spacing: 3px;
+	line-height: 1;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+	background-size: 100% 4px;
+	pointer-events: none;
+	z-index: 100;
+}
