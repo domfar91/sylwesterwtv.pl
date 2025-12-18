@@ -95,6 +95,7 @@ header p {
 	box-sizing: border-box;
 }
 
+/* ZMIANA: Dodano style dla przycisku w wersji desktopowej */
 @media (min-width: 768px) {
 	.station-card {
 		flex: 0 0 calc(50% - 25px);
@@ -106,6 +107,12 @@ header p {
 	.footer p {
 		display: inline-block;
 		width: auto;
+	}
+	#shareBtn {
+		width: auto !important;
+		max-width: 500px;
+		display: inline-block !important;
+		padding: 15px 30px !important;
 	}
 }
 
@@ -171,23 +178,24 @@ header p {
 	max-width: 1200px;
 	margin: 50px auto 0 auto;
 	text-align: center;
-	padding: 0 20px;
+	padding: 0; /* ZMIANA: Usunięto padding boczny kontenera dla mobile */
 	box-sizing: border-box;
 }
 
+/* ZMIANA: Stylizacja przycisku - domyślnie pod mobile */
 #shareBtn {
 	background-color: #00ff00;
 	color: #000;
 	font-family: 'VT323', monospace;
 	font-size: 1.8rem;
-	padding: 15px 30px;
+	padding: 15px 10px;
 	border: 3px solid #fff;
 	cursor: pointer;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	width: 100%;
-	max-width: 500px;
-	display: inline-block;
+	display: block;
+	box-sizing: border-box;
 }
 
 #shareBtn:active {
