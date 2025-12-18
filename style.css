@@ -95,7 +95,6 @@ header p {
 	box-sizing: border-box;
 }
 
-/* ZMIANA: Dodano style dla przycisku w wersji desktopowej */
 @media (min-width: 768px) {
 	.station-card {
 		flex: 0 0 calc(50% - 25px);
@@ -178,11 +177,10 @@ header p {
 	max-width: 1200px;
 	margin: 50px auto 0 auto;
 	text-align: center;
-	padding: 0; /* ZMIANA: Usunięto padding boczny kontenera dla mobile */
+	padding: 0;
 	box-sizing: border-box;
 }
 
-/* ZMIANA: Stylizacja przycisku - domyślnie pod mobile */
 #shareBtn {
 	background-color: #00ff00;
 	color: #000;

@@ -1,26 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const shareBtn = document.getElementById('shareBtn')
+    const shareBtn = document.getElementById('shareBtn');
 
-	shareBtn.addEventListener('click', async () => {
-		const shareData = {
-			title: 'Sylwester w TV 2025 – lista gwiazd',
-			text: 'Sprawdź listę gwiazd na sylwestra w TVP 2, Polsacie i Republice. Wszystko w jednym miejscu.',
-			url: window.location.href,
-		}
-
-		if (navigator.share) {
-			try {
-				await navigator.share(shareData)
-			} catch (err) {
-				console.log('Użytkownik anulował udostępnianie lub wystąpił błąd:', err)
-			}
-		} else {
-			try {
-				await navigator.clipboard.writeText(window.location.href)
-				alert('Link skopiowany. Możesz przesłać go znajomemu.')
-			} catch (err) {
-				alert('Nie udało się skopiować linku. Skopiuj adres z paska przeglądarki.')
-			}
-		}
-	})
-})
+    shareBtn.addEventListener('click', async () => {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    url: window.location.href
+                });
+            } catch (err) {
+                if (err.name !== 'AbortError') {
+                    console.error('Błąd:', err);
+                }
+            }
+        } else {
+            try {
+                await navigator.clipboard.writeText(window.location.href);
+                alert('Link do strony został skopiowany do schowka!');
+            } catch (err) {
+                alert('Błąd kopiowania.');
+            }
+        }
+    });
+});
