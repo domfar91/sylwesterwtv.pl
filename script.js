@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	shareBtn.addEventListener('click', async () => {
 		const shareData = {
-			title: 'Sylwester w TV 2025',
-			text: 'Sprawdź listę gwiazd na Sylwestra w TVP 2, Polsacie i Republice!',
+			title: 'Sylwester w TV 2025 – lista gwiazd',
+			text: 'Sprawdź listę gwiazd na sylwestra w TVP 2, Polsacie i Republice. Wszystko w jednym miejscu.',
 			url: window.location.href,
 		}
 
