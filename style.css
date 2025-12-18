@@ -47,7 +47,7 @@ header p {
 	justify-content: space-between;
 	gap: 10px;
 	max-width: 1200px;
-	margin: 50px auto 50px auto;
+	margin: 40px auto;
 }
 
 .fast-nav a {
@@ -102,6 +102,10 @@ header p {
 	.fast-nav a {
 		font-size: 1.8rem;
 		padding: 15px;
+	}
+	.footer p {
+		display: inline-block;
+		width: auto;
 	}
 }
 
@@ -162,11 +166,6 @@ header p {
 	content: '> ';
 	color: #fff;
 }
-
-.tvn .artist-list li::before {
-	content: '';
-}
-
 .share-container {
 	width: 100%;
 	max-width: 1200px;
@@ -205,13 +204,15 @@ header p {
 .footer p {
 	background-color: #ffff00;
 	color: #000;
-	font-size: 2rem;
-	padding: 15px 25px;
+	font-size: 1.8rem;
+	padding: 15px 10px;
 	margin: 0;
-	display: inline-block;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
 	border: 3px solid #fff;
-	letter-spacing: 3px;
-	line-height: 1;
+	letter-spacing: 2px;
+	line-height: 1.2;
 }
 
 .overlay {
